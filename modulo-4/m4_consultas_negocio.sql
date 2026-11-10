@@ -16,8 +16,8 @@
 
 	SELECT
 		id_producto,
-		SUM(cantidad * precio_unitario) AS total_facturado
-		SUM(cantidad) AS unidades_vendidas,
+		SUM(cantidad * precio_unitario) AS total_facturado,
+		SUM(cantidad) AS unidades_vendidas
 	FROM ventas
 	GROUP BY id_producto
 	ORDER BY total_facturado DESC
